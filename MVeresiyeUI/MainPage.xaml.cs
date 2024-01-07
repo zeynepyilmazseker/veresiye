@@ -40,36 +40,7 @@ public partial class MainPage : ContentPage
             DisplayAlert("HATA OLUŞTU", error, "OK");
         }
 
-        /* 
-                var res =  BL.KisiEkle(new Kisi()
-               {
-                   ID = Guid.NewGuid().ToString(),
-                   Ad="Ali",
-                   Soyad="Kara",
-                   Telefon ="5545228936",
-                   Mail = "alikara@gmail.com",
-                   Adres="Ali Kara'nın ev adresi...."
-
-
-               }, out error);
-
-              var res = BL.KisiDuzenle(new Kisi()
-               {
-                   ID= "87bbe9f9-82ac-4500-aaa6-5c7a1e38eb5a",
-                   Ad="Alican",
-                   Soyad="Beyaz",
-                   Telefon="5454623728",
-                   Mail="ali@gmail.com",
-                   Adres="iş adresi"
-               },out error); 
-
-
-
-               var res = BL.KisiSil(new Kisi()
-               {
-                   ID = "87bbe9f9-82ac-4500-aaa6-5c7a1e38eb5a",
-
-               }, out error); */
+    
 
         res = BL.GirdiEkle(new Girdi()
         {

@@ -24,7 +24,7 @@
                       
                        
                       
-                    <!--    <ImageButton Grid.Row="0" Grid.Column="1"
+                     <ImageButton Grid.Row="0" Grid.Column="1"
                                      Source="edit.png"
                                     HeightRequest="10" WidthRequest="10"
                                      CommandParameter="{Binding ID}"
@@ -39,7 +39,7 @@
                                      CommandParameter="{Binding ID}"
                                      Clicked="GirdiSilClicked"
                                       VerticalOptions="Center"
-                                     HorizontalOptions="End"/> -->
+                                     HorizontalOptions="End"/> 
                     </Grid>
 
                     <ViewCell.ContextActions>

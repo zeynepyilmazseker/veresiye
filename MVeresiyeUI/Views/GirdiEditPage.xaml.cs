@@ -9,7 +9,7 @@ public partial class GirdiEditPage : ContentPage
 
     public Action<Girdi> EditMetod { get; internal set; }
 
-   // public Action<Girdi> RemoveMetod { get; internal set; }
+ 
 
     public GirdiEditPage(Girdi g=null)
 	{

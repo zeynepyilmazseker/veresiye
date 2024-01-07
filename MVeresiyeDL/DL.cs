@@ -17,7 +17,7 @@ using DbConnectionStringBuilder = System.Data.SqlClient.SqlConnectionStringBuild
 
 namespace MVeresiyeDL;
 
-//stored procedure: c# kodu içine sorgu kodu yazılmaz.bunun için stored procedure kullanılır.
+
 public static class DL
 {
 
@@ -30,12 +30,11 @@ public static class DL
     static DbConnection conn = new(new DbConnectionStringBuilder()
     {
 #if MySQL
-        Server = "localhost", //gerçek durumda server ip'si
-        UserID = "root", //veri tabanı kullanıcı adı
+        Server = "localhost", 
+        UserID = "root", 
         Password = "5545228936Zm",
         Database = "veresiye",
-        //SslMode=MySqlConnector.MySqlSslMode.None,
-        //AllowPublicKeyRetrieval = true,
+     
 #endif
     }.ConnectionString);
 

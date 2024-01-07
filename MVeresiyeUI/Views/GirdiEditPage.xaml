@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVeresiyeUI.Views.GirdiEditPage"
+             Title="GirdiEditPage">
+
+        <VerticalStackLayout Margin="30"
+                        Spacing="10">
+
+        <Label Text="Girdi Bilgileri"
+               FontSize="Header"
+               VerticalOptions="Center"/>
+
+        <Grid RowDefinitions="auto,auto,auto,auto"
+              ColumnDefinitions="auto,*"
+              RowSpacing="10"
+              ColumnSpacing="10"
+             >
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Miktar" VerticalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="0" Text="Açıklama" VerticalOptions="Center"  />
+            <Label Grid.Row="2" Grid.Column="0" Text="Tarih" VerticalOptions="Center" />
+            <Label Grid.Row="3" Grid.Column="0" Text="Saat" VerticalOptions="Center"/>
+         
+            <Entry Grid.Row="0" Grid.Column="1" Placeholder="Miktar" x:Name="txtMiktar" VerticalOptions="Center"  />
+            <Entry Grid.Row="1" Grid.Column="1" Placeholder="Açıklama" x:Name="txtAciklama" VerticalOptions="Center"/>
+            <DatePicker Grid.Row="2" Grid.Column="1" x:Name="dtTarih" VerticalOptions="Center" />
+            <TimePicker Grid.Row="3" Grid.Column="1"  x:Name="dtSaat" VerticalOptions="Center"/>
+       
+          
+
+        </Grid>
+
+        <HorizontalStackLayout Margin="30" Spacing="10">
+            <Button Text="tamam" Clicked="OkClicked"/>
+            <Button Text="iptal" Clicked="CancelClicked"/>
+
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

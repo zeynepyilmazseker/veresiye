@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVeresiyeUI.Views.KisiEditPage"
+             Title="Kişi Bilgileri">
+    <VerticalStackLayout Margin="30"
+                        Spacing="10">
+
+        <Label Text="Kişi Bilgileri"
+               FontSize="Header"
+               VerticalOptions="Center"/>
+
+        <Grid RowDefinitions="auto,auto,auto,auto,auto"
+              ColumnDefinitions="auto,*"
+              RowSpacing="10"
+              ColumnSpacing="10"
+             >
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Ad" VerticalOptions="Center"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="Soyad" VerticalOptions="Center"/>
+            <Label Grid.Row="2" Grid.Column="0" Text="Telefon" VerticalOptions="Center"/>
+            <Label Grid.Row="3" Grid.Column="0" Text="Mail" VerticalOptions="Center"/>
+            <Label Grid.Row="4" Grid.Column="0" Text="Adres" VerticalOptions="Center"/>
+
+            <Entry Grid.Row="0" Grid.Column="1" Placeholder="ad" x:Name="txtAd" />
+            <Entry Grid.Row="1" Grid.Column="1" Placeholder="soyad" x:Name="txtSoyad" />
+            <Entry Grid.Row="2" Grid.Column="1" Placeholder="telefon" x:Name="txtTelefon"/>
+            <Entry Grid.Row="3" Grid.Column="1" Placeholder="mail" x:Name="txtMail"/>
+            <Entry Grid.Row="4" Grid.Column="1" Placeholder="adres" x:Name="txtAdres"/>
+
+        </Grid>
+
+        <HorizontalStackLayout Margin="30" Spacing="10">
+            <Button Text="tamam" Clicked="OkClicked"/>
+            <Button Text="iptal" Clicked="CancelClicked"/>
+
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

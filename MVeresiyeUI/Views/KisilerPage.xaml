@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVeresiyeUI.Views.KisilerPage"
+             Title="Kişiler">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="plus.png" Order="Primary" Text="Ekle" Clicked="KisiEkleClicked"  />
+           <ToolbarItem IconImageSource="refresh.png" Order="Primary" Text="Yenile" Clicked="KisileriYukleClicked" />
+    </ContentPage.ToolbarItems>
+
+   <RefreshView RefreshColor="Orange" Refreshing="KisileriYukleClicked" x:Name="refreshView">
+    <CollectionView x:Name="listKisiler" SelectionMode="Single" SelectionChanged="listKisiler_SelectionChanged">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Border BackgroundColor="Transparent" >
+                    <Grid RowDefinitions="auto,auto,auto,auto,auto"
+                          ColumnDefinitions="*,auto"
+                          >
+                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding AdSoyad}" FontSize="Title" TextColor="OrangeRed" />
+                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding Telefon}" />
+                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding Mail}"  />  
+                        <Label Grid.Row="3" Grid.Column="0" Text ="{Binding Adres}" />
+                        <Label Grid.Row="4" Grid.Column="0" Text ="{Binding Borc}" FontSize="Large" TextColor="Red" HorizontalOptions="Center"/> 
+
+                      
+                        <ImageButton Grid.Row="0" Grid.Column="1"
+                                     Source="edit.png"
+                                     HeightRequest="10" WidthRequest="10"
+                                     
+                                     CommandParameter="{Binding ID}"
+                                     Clicked="KisiDuzenleClicked"
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="End"/>
+
+                        <ImageButton Grid.Row="1" Grid.Column="1" HeightRequest="10" WidthRequest="10"
+                                     Source="remove.png"
+                                     CommandParameter="{Binding ID}"
+                                     Clicked="KisiSilClicked"
+                                      VerticalOptions="Center"
+                                     HorizontalOptions="End"/>
+                      
+                       
+                    </Grid>
+
+                </Border>
+
+            </DataTemplate>
+
+        </CollectionView.ItemTemplate>
+
+    </CollectionView>
+    </RefreshView>
+</ContentPage>
